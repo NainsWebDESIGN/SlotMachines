@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7/jquery.min.js"></script>
+    <script src="./js/jquery.easing.1.3.js" type="text/javascript" charset="utf-8"></script>
+    <script src="./js/jquery.jSlots.min.js" type="text/javascript" charset="utf-8"></script>
+    <title>Document</title>
+    <style>
+        ul {
+            padding: 0;
+            margin: 0;
+            list-style: none;
+        }
+
+        .jSlots-wrapper {
+            overflow: hidden;
+            height: 54px;
+            display: inline-block;
+            /* to size correctly, can use float too, or width*/
+            border: 1px solid #999;
+        }
+
+        .slot {
+            float: left;
+        }
+    </style>
+</head>
+
+<body>
+    <ul class="slot">
+        <li><img src="./image/monster1.jpg" alt=""></li>
+        <li><img src="./image/monster2.jpg" alt=""></li>
+        <li><img src="./image/monster3.jpg" alt=""></li>
+        <li><img src="./image/monster4.jpg" alt=""></li>
+        <li><img src="./image/monster5.jpg" alt=""></li>
+        <li><img src="./image/monster6.jpg" alt=""></li>
+        <li><img src="./image/monster7.jpg" alt=""></li>
+        <li><img src="./image/monster8.jpg" alt=""></li>
+        <li><img src="./image/monster9.jpg" alt=""></li>
+        <li><img src="./image/monster10.jpg" alt=""></li>
+        <li><img src="./image/monster11.jpg" alt=""></li>
+        <li><img src="./image/monster12.jpg" alt=""></li>
+        <li><img src="./image/monster13.jpg" alt=""></li>
+        <li><img src="./image/monster14.jpg" alt=""></li>
+        <li><img src="./image/monster15.jpg" alt=""></li>
+        <li><img src="./image/monster16.jpg" alt=""></li>
+        <li><img src="./image/monster17.jpg" alt=""></li>
+        <li><img src="./image/monster18.jpg" alt=""></li>
+    </ul>
+
+    <!-- this button will start the spin -->
+    <input type="button" id="playBtn" value="play">
+
+</body>
+<script type="text/javascript" charset="utf-8">
+
+    $('.slot').jSlots({
+        spinner: '#playBtn',
+        winnerNumber: 19
+    });
+
+</script>
+
+</html>
