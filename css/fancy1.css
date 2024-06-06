@@ -1,0 +1,11 @@
+
+
+.fancy{
+    width: 150px;
+    height: 108px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-left: -75px;
+    margin-top: -54px;
+}

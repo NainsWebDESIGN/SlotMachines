@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>One Page</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+        integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="../css/fancy2.css">
+    <link rel="stylesheet" href="../css/style.css">
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7/jquery.min.js"></script>
+    <script src="../js/jquery.easing.1.3.js" type="text/javascript" charset="utf-8"></script>
+    <script src="../js/jquery.jSlots.min.js" type="text/javascript" charset="utf-8"></script>
+</head>
+
+<body>
+
+
+    <div class="fancy">
+        <ul class="slot">
+            <li><img src="../image/monster1.jpg" alt=""></li>
+            <li><img src="../image/monster2.jpg" alt=""></li>
+            <li><img src="../image/monster3.jpg" alt=""></li>
+            <li><img src="../image/monster4.jpg" alt=""></li>
+            <li><img src="../image/monster5.jpg" alt=""></li>
+            <li><img src="../image/monster6.jpg" alt=""></li>
+            <li><img src="../image/monster7.jpg" alt=""></li>
+            <li><img src="../image/monster8.jpg" alt=""></li>
+            <li><img src="../image/monster9.jpg" alt=""></li>
+            <li><img src="../image/monster10.jpg" alt=""></li>
+            <li><img src="../image/monster11.jpg" alt=""></li>
+            <li><img src="../image/monster12.jpg" alt=""></li>
+            <li><img src="../image/monster13.jpg" alt=""></li>
+            <li><img src="../image/monster14.jpg" alt=""></li>
+            <li><img src="../image/monster15.jpg" alt=""></li>
+            <li><img src="../image/monster16.jpg" alt=""></li>
+            <li><img src="../image/monster17.jpg" alt=""></li>
+            <li><img src="../image/monster18.jpg" alt=""></li>
+        </ul>
+        <input type="button" id="playFancy" value="Play">
+    </div>
+
+    <div class="page">
+        <a href="./oneMonster.html">
+            <i class="fa-solid fa-left-long">上一頁</i>
+        </a>
+        <a href="./threeMonster.html">
+            <i class="fa-solid fa-right-long">下一頁</i>
+        </a>
+    </div>
+
+</body>
+
+
+<script type="text/javascript" charset="utf-8">
+
+
+    // fancy example
+    $('.fancy .slot').jSlots({
+        number: 2,
+        winnerNumber: 1,
+        spinner: '#playFancy',
+        easing: 'easeOutSine',
+        time: 5000,
+        loops: 6,
+        onStart: function () {
+            $('.slot').removeClass('winner');
+        },
+        onWin: function (winCount, winners) {
+            // only fires if you win
+
+            $.each(winners, function () {
+                this.addClass('winner');
+            });
+
+            // react to the # of winning slots                 
+            if (winCount === 1) {
+                //alert('You got ' + winCount + ' 7!!!');
+            } else if (winCount > 1) {
+                //alert('You got ' + winCount + ' 7’s!!!');
+            }
+
+        }
+    });
+
+
+</script>
+
+</html>
